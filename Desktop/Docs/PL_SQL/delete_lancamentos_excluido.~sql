@@ -1,0 +1,13 @@
+delete ts.lancamento_manual
+where num_lancamento_ts IN
+(select lm.num_lancamento_ts
+from ts.lancamento_manual lm
+     join ts.beneficiario b on b.cod_ts = lm.cod_ts
+where lm.cod_tipo_rubrica = 250
+and lm.dt_lancamento >= to_date('15/12/2020', 'dd/mm/yyyy')
+and b.data_exclusao <= to_date('16/12/2020', 'dd/mm/yyyy')
+and lm.num_item_cobranca_ts is null
+and exists (select 1 from ts.beneficiario b2 
+            where b2.cod_ts = b.cod_ts_tit 
+                  and b2.data_exclusao <= to_date('16/12/2020', 'dd/mm/yyyy')))
+--order by 3, 4 desc 

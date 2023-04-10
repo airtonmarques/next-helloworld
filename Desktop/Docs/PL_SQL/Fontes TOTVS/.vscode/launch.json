@@ -1,0 +1,30 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "totvs_language_debug",
+			"request": "launch",
+			"name": "TOTVS Language Debug",
+			"program": "${command:AskForProgramName}",
+			"cwb": "${workspaceFolder}",
+			"smartclientBin": "D:\\TOTVS\\P12HOM_33\\bin\\smartclient\\smartclient.exe",
+			"isMultiSession": true,
+			"enableTableSync": true
+		}
+	],
+	"lastPrograms": [
+		{
+			"label": "sigamdi"
+		},
+		{
+			"label": "u_ecom024"
+		},
+		{
+			"label": "u_tstimp"
+		},
+		{
+			"label": "APSDU"
+		}
+	],
+	"lastProgramExecuted": "u_tstimp"
+}

@@ -1,0 +1,595 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<html>
+
+<head>
+  <title>:: Solicitação de Compras ::</title>
+  <STYLE>
+    DIV {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      background-color: #FFFFFF
+    }
+
+    TABLE {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      border-color: #FFFFFF
+    }
+
+    TD {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      border-color: #FFFFFF
+    }
+
+    FORM {
+      MARGIN: 0px;
+      border-color: #FFFFFF
+    }
+
+    A:link {
+      COLOR: #2d2dcb
+    }
+
+    A:visited {
+      COLOR: #2d2dcb
+    }
+
+    A:active {
+      COLOR: #2d2dcb
+    }
+
+    A:hover {
+      COLOR: #2d2dcb
+    }
+
+    INPUT {
+      FONT-FAMILY: Courier;
+      FONT-SIZE: 12px
+    }
+
+    SELECT {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px
+    }
+
+    .Yellow {
+      BACKGROUND-COLOR: #e8e028
+    }
+
+    .NormalYellow {
+      COLOR: #e8e028;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 13px
+    }
+
+    .TableRowYellow {
+      BACKGROUND-COLOR: #FFFFCC;
+      COLOR: #5F9F9F;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .NormalRedBold {
+      COLOR: #ff0000;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 13px;
+      FONT-WEIGHT: bold
+    }
+
+    .NormalCommentField {
+      FONT-FAMILY: Courier;
+      FONT-SIZE: 12px
+    }
+
+    .NormalBold {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      FONT-WEIGHT: bold
+    }
+
+    .Mini {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .MiniError {
+      COLOR: #ff3333;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .MidleBold {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 14px;
+      FONT-WEIGHT: bold
+    }
+
+    .Small {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .SmallRight {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: right
+    }
+
+    .SmallBold {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      FONT-WEIGHT: bold
+    }
+
+    .SmallBoldHeight {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      FONT-WEIGHT: bold;
+      LINE-HEIGHT: 17px
+    }
+
+    .TitleSmall {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: left
+    }
+
+    .TitleSmallRight {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: right
+    }
+
+    .TitleSmallCenter {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: center
+    }
+
+    .TitleSmallSalmon {
+      COLOR: #ffbfbf;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px
+    }
+
+    .TitleMedium {
+      COLOR: #979797;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 22px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 24px;
+      TEXT-ALIGN: left
+    }
+
+    .TitleMediumRight {
+      COLOR: #979797;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 22px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 24px;
+      TEXT-ALIGN: right
+    }
+
+    .TitleMediumCenter {
+      COLOR: #979797;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 22px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 24px;
+      TEXT-ALIGN: center
+    }
+
+    .TitleBig {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: left
+    }
+
+    .TitleBigRight {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: right
+    }
+
+    .TitleBigCenter {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: center
+    }
+
+    .TitlePopupWhite {
+      COLOR: #5F9F9F;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 16px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 18px;
+      TEXT-ALIGN: right
+    }
+
+    .TableColumnTitle {
+      BACKGROUND-COLOR: #FFFF99;
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 14px;
+      FONT-WEIGHT: bold;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableColumnTitleCenter {
+      BACKGROUND-COLOR: #ffddcb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      FONT-WEIGHT: bold;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGrey {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyCenter {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyForm {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px
+    }
+
+    .TableRowErrorForm {
+      BACKGROUND-COLOR: #ff3333;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px
+    }
+
+    .TableRowGreyTitleMedium {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 19px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyDark {
+      BACKGROUND-COLOR: #ececec;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyDarkMini {
+      BACKGROUND-COLOR: #ececec;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyMini {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowSalmon {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowSalmonCenter {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowSalmonForm {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px
+    }
+
+    .TableRowSalmonFormMini {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .TableRowWhite {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowWhiteCenter {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowWhiteForm {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px;
+      border-color: #5F9F9F
+    }
+
+    .TableRowWhiteMini {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top;
+      border-color: #5F9F9F
+    }
+
+    .TableRowWhiteMini2 {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top;
+      border-color: #5F9F9F
+    }
+
+    .TableRowBlueTitleMedium {
+      BACKGROUND-COLOR: #e4e4e4;
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 28px;
+      VERTICAL-ALIGN: top;
+      FONT-WEIGHT: bold
+    }
+
+    .TableRowBlueDark {
+      BACKGROUND-COLOR: #e4e4e4;
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 14px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowBlueDarkMini {
+      BACKGROUND-COLOR: #5F9F9F;
+      COLOR: #4bbdeb;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowBlueMini {
+      BACKGROUND-COLOR: #364141;
+      COLOR: #4bbdeb;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowBlue {
+      BACKGROUND-COLOR: #5F9F9F;
+      COLOR: #4bbdeb;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .style1 {
+      color: #19167D
+    }
+
+    .style2 {
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: left;
+    }
+
+    .style3 {
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: left;
+    }
+
+    .titulo {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #19167D;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .texto {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #333333;
+      text-decoration: none;
+      font-weight: normal;
+    }
+  </STYLE>
+</head>
+
+<body>
+  <div align="center"><small>
+    </small>
+
+    <META content="Microsoft FrontPage 6.0" name=GENERATOR>
+    </HEAD>
+
+    <BODY>
+      <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 27px" bgcolor=#FFFFFF borderColor=#5F9F9F
+        cellSpacing=0 cellPadding=0 border=1>
+        <TBODY>
+          <TR>
+            <TD bgcolor=#FFFFFF class="SmallBold" style="WIDTH: 941px" height=27>
+              <DIV bgcolor=#FFFFFF style="TEXT-ALIGN: left"><BIG><BIG>
+                    <DIV bgcolor=#FFFFFF style="TEXT-ALIGN: left"><BIG><BIG><SPAN
+                            style="FONT-WEIGHT: 700; COLOR: #666666">
+                            <FONT size=4>Mensagens não respondidas</FONT>
+                          </SPAN></BIG></BIG></DIV>
+                    <DIV bgcolor=#FFFFFF style="TEXT-ALIGN: left"><BIG><BIG><SPAN style="FONT-WEIGHT: 700">
+                            <FONT color=#666666 size=3>!CEMPANT! - !C1_FILIAL!</FONT>
+                          </SPAN></BIG></BIG></DIV>
+            </TD>
+            <TD bgcolor=#FFFFFF style="WIDTH: 370px; TEXT-ALIGN: left" height=100>
+              <img width="155" height="35" align=right
+                src="https://allcare.com.br/blog/wp-content/uploads/2020/11/logo-allcare-1.png">
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+
+      <table bgcolor=#5F9F9F borderColor=#5F9F9F border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor=#5F9F9F><img src="pic_invis.gif" height="1" width="1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <!--webbot bot="PurpleText" PREVIEW="Relaï¿½ï¿½o das SCï¿½s" -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor=#5F9F9F>
+        <tbody>
+          <tr>
+            <td bgcolor="#666666"><img src="file:///C:/ap7wf/workflow/Html/pic_invis.gif" height="1" width="1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table bgcolor=#aebbf3 borderColor=#4bbdeb border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor=#FFFFFF class="TitleBig" height="35" width="12%">
+              <font color=#666666>
+                <font>Usu&aacute;rio:
+            </td>
+            </font>
+            <td bgcolor=#FFFFFF class="TitleMedium" height="35" width="88%">!user!</td>
+          </tr>
+        </tbody>
+      </table>
+      <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 62px" borderColor=#5F9F9F cellSpacing=0
+        cellPadding=0 border=1>
+        <TBODY>
+          <TR>
+            <TD class=TableRowBlueDarkMini style="WIDTH:  1380px; background-color:#5F9F9F;" align=middle height=14
+              colspan="7">
+              <p align="left"><B>
+                  <FONT color=#191970 size=2>Itens da Solicitação</FONT>
+                </B>
+            </TD>
+          </TR>
+          <tr>
+            <td class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1>
+                <font color=#191970></font><b><span>Solicit. No</span></FONT></b></td>
+            <td class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1>
+                <font color=#191970></font><b><span>Emissão</span></FONT></b></td>
+            <td class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1>
+                <font color=#191970></font><b><span>Solicitante</span></FONT></b></td>
+            <td class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1>
+                <font color=#191970></font><b><span>Data Limite</span></FONT></b></td>
+            <td class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1>
+                <font color=#191970></font><b><span>&iacute;vel</span></FONT></b></td>
+            <td class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1>
+                <font color=#191970></font><b><span></span>Aprovador
+              </span></FONT></b></td>
+            <td class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1>
+                <font color=#191970></font><b><span>Email</span></FONT></b></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.1!</td>
+            <td class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.2!</td>
+            <td class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.3!</td>
+            <td class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.4!</td>
+            <td class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.5!</td>
+            <td class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.6!</td>
+            <td class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.7!</td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#5F9F9F"><img src="file:///C:/AP7wf/workflow/Html/pic_invis.gif" height="1" width="1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <!--webbot bot="PurpleText" PREVIEW="rodape" -->
+      <p>
+      <table border="0" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#5F9F9F"><img src="file:///C:/AP7wf/workflow/Html/pic_invis.gif" height="1" width="1"></td>
+          </tr>
+          <tr>
+            <td class="Mini"><strong>Emitido em</strong> !data_hora!</td>
+          </tr>
+          <tr>
+            <td class="Mini" color=#5F9F9F>
+              <font color=#5F9F9F>
+                <font>WorkFlow@AllCare</font>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+select 'update ts.lancamento_manual lm set lm.cod_ts = ' || b1.cod_ts || ', ' ||
+       'lm.cod_ts_contrato = ' || b1.cod_ts_contrato || ', ' ||
+       'lm.cod_entidade_ts = ' || b1.cod_empresa ||
+       ' where lm.num_item_cobranca_ts is null ' ||
+       'and lm.cod_tipo_rubrica >= 250 ' ||
+       'and lm.mes_ano_ref >= to_date(''01/10/2021'', ''dd/mm/yyyy'') ' ||
+       'and lm.cod_ts = ' || b.cod_ts || ';'
+       
+from ts.beneficiario_entidade be
+     join ts.beneficiario b on b.cod_entidade_ts = be.cod_entidade_ts
+                               and b.data_exclusao is not null
+     join ts.beneficiario b1 on b1.cod_entidade_ts = be.cod_entidade_ts
+                             and b1.data_inclusao >= to_date('01/10/2021', 'dd/mm/yyyy')
+where b.num_associado in (139394125,
+137140975,
+139808540,
+137371632,
+139804889,
+139817565,
+137372981,
+137142838,
+139816062,
+139817808,
+139877843,
+139745270,
+139820620,
+139818260,
+139805150,
+139803254,
+139755039,
+137366507,
+140146245,
+139745521,
+139755470,
+139755225)

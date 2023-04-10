@@ -1,0 +1,17 @@
+--Exemplo Kill Session 
+
+select  'alter system kill session ''' 
+
+         || s.sid 
+
+         || ',' 
+
+         || s.SERIAL# 
+
+         || ',@' 
+
+         || s.inst_id 
+
+         || ''';' script, s.* from gv$session s 
+
+         where osuser = 'claudio.mattei'

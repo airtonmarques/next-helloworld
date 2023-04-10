@@ -1,0 +1,732 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+  <TITLE>.:: Solicitações de Compras ::.</TITLE>
+  <META http-equiv=Content-Type content="text/html; charset=utf-8">
+  <STYLE>
+    DIV {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      background-color: #FFFFFF
+    }
+
+    TABLE {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      border-color: #FFFFFF
+    }
+
+    TD {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      border-color: #FFFFFF
+    }
+
+    FORM {
+      MARGIN: 0px;
+      border-color: #FFFFFF
+    }
+
+    A:link {
+      COLOR: #2d2dcb
+    }
+
+    A:visited {
+      COLOR: #2d2dcb
+    }
+
+    A:active {
+      COLOR: #2d2dcb
+    }
+
+    A:hover {
+      COLOR: #2d2dcb
+    }
+
+    INPUT {
+      FONT-FAMILY: Courier;
+      FONT-SIZE: 12px
+    }
+
+    SELECT {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px
+    }
+
+    .Yellow {
+      BACKGROUND-COLOR: #e8e028
+    }
+
+    .NormalYellow {
+      COLOR: #e8e028;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 13px
+    }
+
+    .TableRowYellow {
+      BACKGROUND-COLOR: #FFFFCC;
+      COLOR: #5F9F9F;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .NormalRedBold {
+      COLOR: #ff0000;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 13px;
+      FONT-WEIGHT: bold
+    }
+
+    .NormalCommentField {
+      FONT-FAMILY: Courier;
+      FONT-SIZE: 12px
+    }
+
+    .NormalBold {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10pt;
+      FONT-WEIGHT: bold
+    }
+
+    .Mini {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .MiniError {
+      COLOR: #ff3333;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .MidleBold {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 14px;
+      FONT-WEIGHT: bold
+    }
+
+    .Small {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .SmallRight {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: right
+    }
+
+    .SmallBold {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      FONT-WEIGHT: bold
+    }
+
+    .SmallBoldHeight {
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      FONT-WEIGHT: bold;
+      LINE-HEIGHT: 17px
+    }
+
+    .TitleSmall {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: left
+    }
+
+    .TitleSmallRight {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: right
+    }
+
+    .TitleSmallCenter {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: center
+    }
+
+    .TitleSmallSalmon {
+      COLOR: #ffbfbf;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px
+    }
+
+    .TitleMedium {
+      COLOR: #979797;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 22px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 24px;
+      TEXT-ALIGN: left
+    }
+
+    .TitleMediumRight {
+      COLOR: #979797;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 22px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 24px;
+      TEXT-ALIGN: right
+    }
+
+    .TitleMediumCenter {
+      COLOR: #979797;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 22px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 24px;
+      TEXT-ALIGN: center
+    }
+
+    .TitleBig {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: left
+    }
+
+    .TitleBigRight {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: right
+    }
+
+    .TitleBigCenter {
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: center
+    }
+
+    .TitlePopupWhite {
+      COLOR: #5F9F9F;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 16px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 18px;
+      TEXT-ALIGN: right
+    }
+
+    .TableColumnTitle {
+      BACKGROUND-COLOR: #FFFF99;
+      COLOR: #074b85;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 14px;
+      FONT-WEIGHT: bold;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableColumnTitleCenter {
+      BACKGROUND-COLOR: #ffddcb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      FONT-WEIGHT: bold;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGrey {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyCenter {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyForm {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px
+    }
+
+    .TableRowErrorForm {
+      BACKGROUND-COLOR: #ff3333;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px
+    }
+
+    .TableRowGreyTitleMedium {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 19px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyDark {
+      BACKGROUND-COLOR: #ececec;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyDarkMini {
+      BACKGROUND-COLOR: #ececec;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowGreyMini {
+      BACKGROUND-COLOR: #f7f7f7;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowSalmon {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowSalmonCenter {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowSalmonForm {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px
+    }
+
+    .TableRowSalmonFormMini {
+      BACKGROUND-COLOR: #fff2eb;
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px
+    }
+
+    .TableRowWhite {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowWhiteCenter {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      TEXT-ALIGN: center;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowWhiteForm {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      HEIGHT: 22px;
+      border-color: #5F9F9F
+    }
+
+    .TableRowWhiteMini {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top;
+      border-color: #5F9F9F
+    }
+
+    .TableRowWhiteMini2 {
+      COLOR: #666666;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top;
+      border-color: #5F9F9F
+    }
+
+    .TableRowBlueTitleMedium {
+      BACKGROUND-COLOR: #e4e4e4;
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 28px;
+      VERTICAL-ALIGN: top;
+      FONT-WEIGHT: bold
+    }
+
+    .TableRowBlueDark {
+      BACKGROUND-COLOR: #e4e4e4;
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 14px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowBlueDarkMini {
+      BACKGROUND-COLOR: #5F9F9F;
+      COLOR: #4bbdeb;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowBlueMini {
+      BACKGROUND-COLOR: #364141;
+      COLOR: #4bbdeb;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 10px;
+      VERTICAL-ALIGN: top
+    }
+
+    .TableRowBlue {
+      BACKGROUND-COLOR: #5F9F9F;
+      COLOR: #4bbdeb;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 12px;
+      VERTICAL-ALIGN: top
+    }
+
+    .style1 {
+      color: #19167D
+    }
+
+    .style2 {
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 24px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 26px;
+      TEXT-ALIGN: left;
+    }
+
+    .style3 {
+      COLOR: #19167D;
+      FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+      FONT-SIZE: 18px;
+      FONT-WEIGHT: normal;
+      LINE-HEIGHT: 20px;
+      TEXT-ALIGN: left;
+    }
+
+    .titulo {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #19167D;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .texto {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #333333;
+      text-decoration: none;
+      font-weight: normal;
+    }
+  </STYLE>
+
+  <META content="Microsoft FrontPage 6.0" name=GENERATOR>
+</HEAD>
+
+<BODY>
+  <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 27px" bgcolor=#FFFFFF borderColor=#5F9F9F cellSpacing=0
+    cellPadding=0 border=0>
+    <TBODY>
+      <TR>
+        <TD class="SmallBold" style="WIDTH: 941px" height=27>
+          <DIV style="TEXT-ALIGN: left"><BIG><BIG><SPAN style="FONT-WEIGHT: 700">
+                  <FONT color=#666666 size=3>Workflow - Solicitação de Compra Número: !C1_NUM!</FONT>
+                </SPAN></BIG></BIG></DIV>
+          <DIV style="TEXT-ALIGN: left"><BIG><BIG><SPAN style="FONT-WEIGHT: 700">
+                  <FONT color=#666666 size=3>!CEMPANT! - !C1_FILIAL!</FONT>
+                </SPAN></BIG></BIG></DIV>
+        </TD>
+        <TD style="WIDTH: 370px; TEXT-ALIGN: left" height=100>
+          <img width="155" height="35" align=right
+            src="https://allcare.com.br/blog/wp-content/uploads/2020/11/logo-allcare-1.png">
+        </TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+  <FORM method=post action=WFHTTPRET.APL name=FrontPage_Form1>
+    <TABLE cellSpacing=0 cellPadding=0 width="100%" bgcolor=#5F9F9F border=1>
+      <TBODY>
+        <TR>
+          <TD bgColor=#FFFFFF><IMG height=1 src="pic_invis.gif" width=1></TD>
+        </TR>
+      </TBODY>
+    </TABLE>
+    <TABLE style="BORDER-COLLAPSE: collapse" bgcolor=#FFFFFF borderColor=color:#5F9F9F cellSpacing=0 cellPadding=0
+      width="100%">
+      <TBODY>
+        <TR>
+          <TD style="TEXT-ALIGN: left" width="16%" height=25><B>
+              <FONT color=#666666 size=2>Data de Emissão:</FONT>
+            </B></TD>
+          <TD style="TEXT-ALIGN: left" width="52%" height=25><B>
+              <FONT color=#666666 size=2>!C1_EMISSAO!</FONT>
+            </B></TD>
+        <TR>
+          <TD style="TEXT-ALIGN: left" width="16%" height=25><B>
+              <FONT color=#666666 size=2>Solicitante:</FONT>
+            </B></TD>
+          <TD style="TEXT-ALIGN: left" width="52%" height=25><B>
+              <FONT color=#666666 size=2>!C1_USER!</FONT>
+            </B></TD>
+        <TR>
+          <TD style="TEXT-ALIGN: left" width="16%" height=25><B>
+              <FONT color=#666666 size=2>Fornecedor:</FONT>
+            </B></TD>
+          <TD style="TEXT-ALIGN: left" width="52%" height=25><B>
+              <FONT color=#666666 size=2>!A2_NOME!</FONT>
+            </B></TD>
+        <TR>
+          <TD style="TEXT-ALIGN: left" width="16%" height=25><B>
+              <FONT color=#666666 size=2>Aprovador:</FONT>
+            </B></TD>
+          <TD style="TEXT-ALIGN: left" width="16%" height=25><B>
+              <FONT color=#666666 size=2>!CR_USER!</FONT>
+            </B></TD>
+        </TR>
+      </TBODY>
+    </TABLE><BR>
+
+    <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 62px" borderColor=#5F9F9F cellSpacing=0 cellPadding=0
+      border=1>
+      <TBODY>
+        <TR>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  1380px; background-color:#5F9F9F;" align=middle height=14
+            colspan="10">
+            <p align="left"><B>
+                <FONT color=#191970 size=2>Itens da Solicitação</FONT>
+              </B>
+          </TD>
+        </TR>
+        <TR>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  41px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Item</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH: 300px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Produto / Serviço</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  64px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Qtde</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  23px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Un</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  80px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Centro de Custo</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH: 140px" align=middle height=14><span class=style1><B>
+                <font color=#191970>Desc. C.Custo
+              </b></font></span></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH: 250px" align=middle height=14><span class=style1><B>
+                <FONT color=#191970>Observação
+              </b></font></span></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH: 100px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Dt. Necessidade</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  60px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Vlr. Previsto</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  60px" align=middle height=14><SPAN class=style1><B>
+                <FONT color=#191970>Rejeitar</FONT>
+              </B></SPAN></TD>
+      </TBODY>
+      <TBODY>
+        <TR>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.1!</TD>
+          <TD class=TableRowWhiteMini2 align=left borderColor=#5F9F9F>!t.2!</TD>
+          <TD class=TableRowWhiteMini2 align=right borderColor=#5F9F9F>!t.3!</TD>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.4!</TD>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.5!</TD>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.6!</TD>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.7!</TD>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.8!</TD>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F>!t.9!</TD>
+          <TD class=TableRowWhiteMini2 align=middle borderColor=#5F9F9F><input type="checkbox" id="%t.10%" name="%t.10%" onclick="fCheck(this.id)" value="%t.10%"></TD>
+        </TR>
+      </TBODY>
+    </TABLE>
+    <br></br>
+    <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 29px" borderColor=#003486 cellSpacing=0 cellPadding=2
+      bgColor=#5F9F9F border=1>
+      <TBODY>
+        <TR>
+        </TR>
+      </TBODY>
+      <TBODY>
+        <TR>
+        </TR>
+      </TBODY>
+      <TBODY>
+      </TBODY>
+    </TABLE><BR><BR>
+
+    <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 62px" borderColor=#5F9F9F cellSpacing=0 cellPadding=0
+      border=1>
+      <TBODY>
+        <TR>
+          <TD class=TableRowBlueDarkMini style="WIDTH:  1380px; background-color:#5F9F9F;" align=middle height=14
+            colspan="5">
+            <P align=left>
+              <FONT color=#191970 size=2><B>Processo de aprovação</B></FONT>
+            </P>
+          </TD>
+        </TR>
+
+        <TR>
+          <TD class=TableRowBlueDarkMini align=middle width="20%" height=12><span class=style1><B>
+                <font color=#191970><b>Aprovador</b></font></span></TD>
+          <TD class=TableRowBlueDarkMini align=middle width="17%" height=12><SPAN class=style1><B>
+                <FONT color=#191970>Situação</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini align=middle width="15%" height=12><SPAN class=style1><B>
+                <FONT color=#191970>Aprovado por</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini align=middle width="10%" height=12><SPAN class=style1><B>
+                <FONT color=#191970>Data</FONT>
+              </B></SPAN></TD>
+          <TD class=TableRowBlueDarkMini align=middle width="32%" height=12><SPAN class=style1><B>
+                <FONT color=#191970>Observações</FONT>
+              </B></SPAN></TD>
+        </TR>
+      </TBODY>
+      <TBODY>
+        <TR>
+          <TD class=TableRowWhiteMini2 align=left width="20%" height=18>!ta.2!</TD>
+          <TD class=TableRowWhiteMini2 align=middle width="17%" height=18>!ta.3!</TD>
+          <TD class=TableRowWhiteMini2 align=middle width="15%" height=18>!ta.4!</TD>
+          <TD class=TableRowWhiteMini2 align=middle width="10%" height=18>!ta.5!</TD>
+          <TD class=TableRowWhiteMini2 align=left width="32%" height=18>!ta.6!</TD>
+        </TR>
+      </TBODY>
+    </TABLE><BR>
+    <div align="center">
+      <center>
+        <table style="background-color:#FFFFFF;" align=middle width="677">
+          <tbody>
+            <tr>
+              <td> </td>
+            </tr>
+            <tr>
+              <td width="800">
+                <table style="width: 704px; height: 156px;">
+                  <tbody>
+                    <tr>
+                      <!--  <td class="TableColumnTitle" colspan="2" style="background-color:#657275 ; width: 494px;" height="14"><font color="#4bbdeb">Aprova ?</font></td> -->
+                    </tr>
+                    <tr>
+                      <!--<td style="width: 494px;" colspan="2" height="14"><font class="Small" color=#657275><input name="OPC" value="%OPC%S" id="opcSim" type="radio">Sim.</font></td>-->
+                    </tr>
+                    <tr>
+                      <!--<td style="width: 194px;" height="13" valign="top"><font class="Small" color=#657275><input name="OPC" value="%OPC%N" type="radio" id="opcNao">N&atilde;o.(Especificar motivo) </font></td>-->
+                      <td style="width: 494px;" height="13">
+                        <font face="Tahoma" size="1"><textarea name="OBS" rows="5" cols="80">%OBS%</textarea> </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 494px;" colspan="2" height="27">
+                        <font face="Tahoma">
+                          <!--webbot bot="HTMLMarkup" startspan -->
+                          <input name="CHAVE" value="%CHAVE%" type="hidden">
+                          <!--webbot bot="HTMLMarkup" endspan i-checksum="59291" -->
+                          <!--webbot bot="HTMLMarkup" startspan -->
+                          <input name="CFILANT" value="%CFILANT%" type="hidden">
+                          <!--webbot bot="HTMLMarkup" endspan i-checksum="40673" -->
+                          <!--webbot bot="HTMLMarkup" startspan -->
+                          <input name="WFID" value="%WFID%" type="hidden">
+                          <!--webbot bot="HTMLMarkup" endspan i-checksum="49783" -->
+                          <input value="Enviar" name="B1" type="submit" style='width: 100px; HEIGHT: 35px'>
+                          <input value="Limpar" name="B2" type="reset" style='width: 100px; HEIGHT: 35px'></font>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+  </form>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+      <tr>
+        <td bgcolor="#666666"><img src="pic_invis.gif" height="1" width="1"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table border="0" width="100%">
+    <tbody>
+      <tr>
+        <td class="Mini">Emitido em !data_hora!</td>
+      </tr>
+      <tr>
+        <td class="Mini">
+          <Font color=#5F9F9F>WorkFlow@AllCare</Font>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
+
+<script type="text/javascript">
+  function fCheck(ClickId) {
+    var elm = document.getElementById(ClickId);
+
+    if (elm.checked == true) {;
+      elm.value = ClickId + "ON";
+      elm.defaultValue = ClickId + "ON";
+      elm.attributes.value.textContent = ClickId + "ON";
+      elm.attributes.value.nodeValue = ClickId + "ON";
+    } else {;
+      elm.value = ClickId + "OFF";
+      elm.defaultValue = ClickId + "OFF";
+      elm.attributes.value.textContent = ClickId + "OFF";
+      elm.attributes.value.nodeValue = ClickId + "OFF";
+    };
+  } 
+</script>

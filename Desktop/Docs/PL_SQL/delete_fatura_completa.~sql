@@ -1,0 +1,153 @@
+delete from fat_log_faturamento
+where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367);
+commit;
+----
+
+delete from fat_emissao_cancelada
+where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367);
+commit;
+----
+
+update cobranca set NUM_SEQ_FATURA_TS = null
+where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367);
+commit;
+----
+
+delete from fatura
+where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367);
+commit;
+----
+         
+delete from cobranca_comissao
+where num_seq_cobranca in (select num_seq_cobranca from cobranca where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367));
+commit;
+----
+         
+delete fat_envio_alteracao_cnab f 
+where f.num_seq_cobranca IN (select num_seq_cobranca from cobranca where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367));
+commit;
+----
+         
+delete fat_emissao_cancelada ec
+where ec.num_seq_cobranca IN (select num_seq_cobranca from cobranca where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367));
+commit;
+----
+
+delete from credito_recebido_sur
+where num_seq_cobranca in (select num_seq_cobranca from cobranca where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367));
+commit;
+------
+
+delete from ocorrencia_alocacao_sur
+where num_seq_cobranca in (select num_seq_cobranca from cobranca where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367));
+commit;
+----
+
+delete from cobranca
+where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367);
+commit;
+----
+
+delete from itens_cobranca
+where cod_ts in (1425227,
+1424293,
+1424139,
+1424074,
+1421085,
+1424112,
+1423637,
+1424427,
+1425368,
+1425367);
+commit;
+----

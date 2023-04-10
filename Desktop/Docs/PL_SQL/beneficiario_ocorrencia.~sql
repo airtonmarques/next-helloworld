@@ -1,0 +1,7 @@
+select oa.dt_ocorrencia,
+       oa.txt_obs,
+       oa.dt_fato,
+       oa.cod_usuario_atu
+from ts.beneficiario b
+     join ts.ocorrencia_associado oa on oa.cod_ts = b.cod_ts
+where b.num_associado = 137715455

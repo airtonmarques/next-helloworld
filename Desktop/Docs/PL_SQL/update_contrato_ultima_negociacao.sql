@@ -1,0 +1,1 @@
+update ts.contrato_cobranca cc set cc.val_taxa_administrativa = 0 where cc.cod_ts_contrato IN (select ce.cod_ts_contrato from ts.contrato_empresa ce where ce.num_contrato = '14857' and cc.dt_ini_cobranca = (select max(cc2.dt_ini_cobranca) from ts.contrato_cobranca cc2 where cc2.cod_ts_contrato = cc.cod_ts_contrato));

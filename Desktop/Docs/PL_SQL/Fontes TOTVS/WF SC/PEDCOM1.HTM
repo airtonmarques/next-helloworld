@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>::Aprova&ccedil;&atilde;o de Pedido de Compra ::</title>
+    <style type="text/css">
+        TD {
+            font-family: Arial;
+            font-size: 14px;
+        }
+        TD.style2 {
+            font-family: Arial;
+            font-size: 18px;
+        }
+        TD.style3 {
+            font-family: Arial
+        }
+        TD.style4 {
+            font-family: Arial;
+            font-size: 14px;
+        }
+        .grid_titulo {
+            PADDING-RIGHT: 5px;
+            PADDING-LEFT: 5px;
+            FONT-SIZE: 8pt;
+            COLOR: #000000;
+            FONT-FAMILY: Arial;
+            BACKGROUND-COLOR: #C0D9D9;
+            border: 1px solid #C0D9D9;
+        }
+        .grid_par {
+            font-family: Arial font-size: 8pt;
+            color: #000000;
+            background-color: #E6E8FA;
+            border: 1px solid #E6E8FA;
+            padding-right: 2px;
+            padding-left: 2px;
+        }
+        .grid_rateio {
+            font-family: Arial font-size: 8pt;
+            color: #000000;
+            background-color: #D9D9F3;
+            border: 1px solid #2F4F4F;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        .bordaBox {
+            bbackground: ttransparent;
+            width: 98%;
+        }
+        .bordaBox .b1,
+        .bordaBox .b2,
+        .bordaBox .b3,
+        .bordaBox .b4,
+        .bordaBox .b1b,
+        .bordaBox .b2b,
+        .bordaBox .b3b,
+        .bordaBox .b4b {
+            display: block;
+            overflow: hidden;
+            font-size: 1px;
+        }
+        .bordaBox .b1,
+        .bordaBox .b2,
+        .bordaBox .b3,
+        .bordaBox .b1b,
+        .bordaBox .b2b,
+        .bordaBox .b3b {
+            height: 1px;
+        }
+        .bordaBox .b2,
+        .bordaBox .b3,
+        .bordaBox .b4 {
+            background: #5F9F9F;
+            border-left: 5px solid #5F9F9F;
+            border-right: 5px solid #5F9F9F;
+        }
+        .bordaBox .b1 {
+            margin: 0 5px;
+            background: #C0D9D9;
+        }
+        .bordaBox .b2 {
+            margin: 0 3px;
+            border-width: 0 5px;
+        }
+        .bordaBox .b3 {
+            margin: 0 2px;
+        }
+        .bordaBox .b4 {
+            height: 2px;
+            margin: 0 1px;
+        }
+        .bordaBox .conteudo {
+            padding: 5px;
+            display: block;
+            border-left: 5px solid #5F9F9F;
+            border-right: 5px solid #5F9F9F;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="form1" method="post" action="mailto:%WFMailTo%">
+
+        <div class="bordaBox">
+            <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+            <div class="conteudo">
+                <table width="85%">
+                    <tbody>
+                        <tr>
+                            <td class="style2" align="left" width="42%"></td>
+                            <td class="style2" align="left" width="42%"><strong>APROVA&Ccedil;&Atilde;O DO PEDIDO DE COMPRA</strong>
+                            </td>
+                            <td height="50" width="45%">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <b class="b4"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+        </div>
+
+        <p></p>
+
+		<table width="100%">
+            <tbody>
+                <tr>
+                    <td><b>Filial :</b> %C7_FILIAL% </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td><b>Fornecedor:</b> %C7_FORNECE% - %NOME%</td>
+                    <td><b>Cond.Pagamento :</b> %C7_COND% - %E4_DESCRI%</td>
+                </tr>
+            </tbody>
+        </table>
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td><b>Pedido N. :</b> %C7_NUM%</td>
+                    <td><b>Emissao:</b> %C7_EMISSAO%</td>
+                </tr>
+            </tbody>
+        </table>
+         <table width="100%">
+            <tbody>
+                <tr>
+                    <td><b>Moeda:</b> %C7_MOEDA%</td>
+                </tr>
+            </tbody>
+        </table>
+		<table width="100%">
+            <tbody>
+                <tr>
+                    <td><b>Centro de Custo:</b> %CCUSTO%</td>
+                </tr>
+            </tbody>
+        </table>
+        <table width="0%">
+            <tbody>
+                <tr>
+                    <td class="style4"></td>
+                    <td class="style4">
+                        <br />
+                        <b>Itens do Pedido de Compra</b> </td>
+                </tr>
+            </tbody>
+        </table>
+        <width align="center" height="0" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000"> </width>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th class="grid_titulo"><b>Item</b>
+                    </th>
+                    <th class="grid_titulo"><b>Produto</b>
+                    </th>
+                    <th class="grid_titulo"><b>Descri&ccedil;&atilde;o</b>
+                    </th>
+                    <th class="grid_titulo"><b>Quant.</b>
+                    </th>
+                    <th class="grid_titulo"><b>Unid.</b>
+                    </th>
+                    <th class="grid_titulo"><b>Data de Entrega</b>
+                    </th>
+                    <th class="grid_titulo"><b>C.Custo</b>
+                    </th>
+                    <th class="grid_titulo"><b>Vlr.Unit&aacute;rio</b>
+                    </th>
+                    <th class="grid_titulo"><b>Vlr.Total</b>
+                    </th>
+                    <th class="grid_titulo"><b>Obs.</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="grid_par">%C7.ITEM%</td>
+					<td class="grid_par">%C7.PRODUTO%</td>
+                    <td class="grid_par">%C7.DESCRI%</td>
+                    <td class="grid_par">%C7.QUANT%</td>
+                    <td class="grid_par">%C7.UM%</td>
+                    <td class="grid_par">%C7.DATPRF%</td>
+                    <td class="grid_par">%C7.CUSTO%</td>
+                    <td class="grid_par">%C7.PRECO%</td>
+                    <td class="grid_par">%C7.TOTAL%</td>
+                    <td class="grid_par">%C7.OBS%</td>
+               </tr>
+            </tbody>
+        </table>
+
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td class="grid_par" colspan="7"><b>Total da Aprova&ccedil;&atilde;o</b>
+                    </td>
+                    <td class="grid_par">%total.C7_TOTAL%</td>
+                    <td class="grid_par" colspan="7"><b>Total do Pedido</b>
+                    </td>
+                    <td class="grid_par">%total.PEDIDO%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+        </p>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><b>Aprovadores: </b>
+                    </td>
+    <table width="100%">
+            <thead>
+                <tr>
+
+                    <th class="grid_titulo"><b>Codigo</b>
+                    </th>
+                    <th class="grid_titulo"><b>Usuario</b>
+                    </th>
+                    <th class="grid_titulo"><b>Nivel</b>
+                    </th>
+                    <th class="grid_titulo"><b>Grupo Aprov</b>
+                    </th>
+                    <th class="grid_titulo"><b>Status</b>
+                    </th>
+                    <th class="grid_titulo"><b>Data Lib.</b>
+                    </th>
+                    <th class="grid_titulo"><b>Observa&ccedil;&atilde;o</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="grid_par">%CR.CODIGO%</td>
+                    <td class="grid_par">%CR.USER%</td>
+                    <td class="grid_par">%CR.NIVEL%</td>
+                    <td class="grid_par">%CR.GRUPO%</td>
+                    <td class="grid_par">%CR.STATUS%</td>
+                    <td class="grid_par">%CR.DATALIB%</td>
+                    <td class="grid_par">%CR.OBS%</td>
+                </tr>
+            </tbody>
+        </table>
+      </tr>
+            </tbody>
+        </table>
+
+        <p>
+        </p>
+
+        <div class="bordaBox">
+            <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+            <div class="conteudo">
+
+
+                <table width="90%">
+                    <tbody>
+                        <tr>
+                            <td class="style2" align="left" width="42%"></td>
+                            <td class="style2" align="left" width="42%"><strong>SOLICITANTE/APROVADOR</strong>
+                            </td>
+                            <td height="50" width="100%">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <b class="b4"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+        </div>
+
+        <p></p>
+        <table width="90%">
+            <tbody>
+                <tr>
+                    <td>
+                        <width="40%" valign="top" height="80" class="style2">
+                            <b>&nbsp;Solicitante: </b>%SOLI%
+                            <br />
+                            <b>&nbsp;Comprador: </b>%CMPR%
+                            <br />
+                            <b>&nbsp;Aprovador :</b>%APROVADOR% &nbsp; - %APROV%
+                            <br />
+                            <br />
+                            <b>&nbsp;Grupo :</b>%GRUPO%
+                            <br />
+                            <b>&nbsp;Item Grupo :</b>%ITGRP%
+                            <br />
+                            </width>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table width="90%">
+            <tbody>
+                <tr>
+                    <td class="style4" width="0%"></td>
+                    <td class="style4" width="0%">
+                        <p><strong>&nbsp;Aprova&ccedil;&atilde;o</strong>
+                            <br />
+                            <input name="Aprovacao" value="%Aprovacao%S" type="radio" />Sim.
+                            <br />
+                            <input name="Aprovacao" value="%Aprovacao%N" type="radio" />N&atilde;o.&nbsp;(Favor especificar motivo)
+                            <br />
+                        </p>
+                        <p><b>
+&nbsp;Motivo<br />
+</b> &nbsp;
+                            <textarea name="S1" cols="38" rows="6" id="S1">%motivo%</textarea>
+                            <br /> &nbsp;
+                            <input name="%botoes%" id="%botoes%" value="Enviar" type="submit" />
+                        </p>
+                    </td>
+                    <td height="50" width="45%">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+</body>
+
+</html>

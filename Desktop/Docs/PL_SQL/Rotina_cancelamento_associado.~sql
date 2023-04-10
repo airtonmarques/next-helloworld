@@ -1,0 +1,31 @@
+--Rotina Cancelamento de Associado
+delete TS.CMS_CONTRATO_ADESAO ca
+where ca.cod_ts in (1416773,
+1416796,
+1416797,
+1411458,
+1410704,
+1411396,
+1414628,
+1414629,
+1411407,
+1411415,
+1411583,
+1410484,
+1410699,
+1410661,
+1411211,
+1408461,
+1408475,
+1411642,
+1411435,
+1416667)
+--------------------------------------
+--ass_cancela_inclusao_ass(p_cod_ts => , p_cod_usuario => 'RAFAQUESI', p_endereco_ip => '', p_cod_retorno => p_ind_erro_out, p_msg_retorno => p_msg_retorno_out, p_commit => 'S', p_versao => 'N');
+/*
+select distinct b.cod_ts
+from ts.beneficiario b
+     join ts.contrato_empresa ce on ce.cod_ts_contrato = b.cod_ts_contrato
+where ce.num_contrato IN ()		 */ 
+		 
+

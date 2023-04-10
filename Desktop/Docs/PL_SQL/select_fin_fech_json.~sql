@@ -1,0 +1,64 @@
+ select '{"ACAO_JUDICIAL":"' || ACAO_JUDICIAL || '",' ||
+            '"ADMINISTRADORA":"' || ACAO_JUDICIAL || '",' ||   
+            '"CODIGO_PLANO_DENTAL":"' || CODIGO_PLANO_DENTAL || '",' || 
+            '"CODIGO_PLANO_MEDICO":"' || CODIGO_PLANO_MEDICO || '",' ||         
+            '"CONTRATO":"' || CONTRATO || '",' ||          
+            '"CONTRATO_OPERADORA":"' || CONTRATO_OPERADORA || '",' ||        
+            '"CPF":"' || CPF || '",' ||          
+            '"DATA_INCLUSAO":"' || DATA_INCLUSAO || '",' ||         
+            '"DATA_NASCIMENTO":"' || DATA_NASCIMENTO || '",' ||          
+            '"DIA_VIGENCIA":"' || DIA_VIGENCIA || '",' ||          
+            '"DATA_ADESAO":"' || DATA_ADESAO || '",' ||          
+            '"DATA_EXCLUSAO":"' || DATA_EXCLUSAO || '",' ||          
+            '"DATA_ULTIMA_SUSPENSAO":"' || DATA_ULTIMA_SUSPENSAO || '",' ||          
+            '"DATA_REATIVACAO":"' || DATA_REATIVACAO || '",' ||         
+            '"ENTIDADE":"' || ENTIDADE || '",' ||         
+            '"FATURA":"' || FATURA || '",' ||          
+            '"FILIAL":"' || FILIAL || '",' ||           
+            '"IDADE":"' || IDADE || '",' ||           
+            '"MO_DENTAL":"' || MO_DENTAL || '",' ||           
+            '"MO_MEDICO":"' || MO_MEDICO || '",' ||          
+            '"MES_ANO":"' || MES_ANO || '",' ||          
+            '"MOTIVO_EXCLUSAO":"' || MOTIVO_EXCLUSAO || '",' ||           
+            '"NOME_BENEFICIARIO":"' || NOME_BENEFICIARIO || '",' ||           
+            '"NOME_PLANO_DENTAL":"' || NOME_PLANO_DENTAL || '",' ||           
+            '"NOME_PLANO_MEDICO":"' || NOME_PLANO_MEDICO || '",' ||          
+            '"NUMERO_BENEFICIARIO":"' || NUMERO_BENEFICIARIO || '",' ||         
+            '"OPERADORA":"' || OPERADORA || '",' ||           
+            '"PERIODO_COBERTURA_INICIAL":"' || PERIODO_COBERTURA_INICIAL || '",' ||         
+            '"PERIODO_COBERTURA_FINAL":"' || PERIODO_COBERTURA_FINAL || '",' ||          
+            '"PORTE_CONTRATO":"' || PORTE_CONTRATO || '",' ||           
+            '"SITUACAO_BENEFICIARIO":"' || SITUACAO_BENEFICIARIO || '",' ||           
+            '"SITUACAO_CONTRATO":"' || SITUACAO_CONTRATO || '",' ||          
+            '"SITUACAO_FATURA":"' || SITUACAO_FATURA || '",' ||          
+            '"CICLO":"' || CICLO || '",' ||          
+            '"TIPO_BENEFICIARIO":"' || TIPO_BENEFICIARIO || '",' ||        
+            '"TIPO_PRODUTO":"' || TIPO_PRODUTO || '",' ||          
+            '"CODIGO_RUBRICA":"' || CODIGO_RUBRICA || '",' ||           
+            '"NOME_RUBRICA":"' || NOME_RUBRICA || '",' ||         
+            '"VALOR_COMERCIAL":"' || VALOR_COMERCIAL || '",' ||           
+            '"VALOR_NET":"' || VALOR_NET || '",' ||          
+            '"VIGENCIA":"' || VIGENCIA || '",' ||          
+            '"DEPENDENCIA":"' || DEPENDENCIA || '",' ||           
+            '"SEXO":"' || SEXO || '",' ||           
+            '"CODIGO_FAMILIA_ALLSYS":"' || CODIGO_FAMILIA_ALLSYS || '",' ||          
+            '"CODIGO_UNICO_BENEFICIARIO":"' || CODIGO_UNICO_BENEFICIARIO || '",' ||         
+            '"CNPJ_ENTIDADE":"' || CNPJ_ENTIDADE || '",' ||          
+            '"VENCIMENTO":"' || VENCIMENTO || '",' ||         
+            '"VENCIMENTO_ORIGINAL":"' || VENCIMENTO_ORIGINAL || '",' ||          
+            '"DATA_EMISSAO":"' || DATA_EMISSAO || '",' ||          
+            '"DATA_PAGAMENTO":"' || DATA_PAGAMENTO || '",' ||           
+            '"DATA_LIQUIDACAO":"' || DATA_LIQUIDACAO || '",' ||          
+            '"COBRANCA":"' || COBRANCA || '",' ||          
+            '"TIPO_BAIXA":"' || TIPO_BAIXA || '",' ||           
+            '"VALOR_PAGO":"' || VALOR_PAGO || '",' ||          
+            '"VALOR_OVER":"' || VALOR_OVER || '",' ||          
+            '"VIDAS":"' || VIDAS || '"},'            
+      from FIN_FECH
+      where rownum = 1
+      order by administradora, 
+               operadora,  
+               porte_contrato, 
+               codigo_familia_allsys, 
+               tipo_beneficiario desc, 
+               fatura 

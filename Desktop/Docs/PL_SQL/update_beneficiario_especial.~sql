@@ -1,0 +1,3 @@
+update beneficiario_contrato bc
+set bc.cod_situacao_esp = 1
+where bc.cod_ts IN (select cod_ts from ts.beneficiario where cod_ts_contrato = 44799) 

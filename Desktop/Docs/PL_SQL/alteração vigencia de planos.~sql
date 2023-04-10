@@ -1,0 +1,80 @@
+select distinct 
+       ce.num_contrato,
+			 /*'update ts.contrato_empresa ce set ce.data_inicio_vigencia = to_date(''01/04/2023'', ''dd/mm/yyyy'') where ce.cod_ts_contrato = ' || ce.cod_ts_contrato || ';', 
+				
+				'update ts.contrato_cobranca cc set cc.dt_ini_cobranca = to_date(''01/04/2023'', ''dd/mm/yyyy'') where cc.cod_ts_contrato = ' || ce.cod_ts_contrato || ';',
+			 
+			 'update ts.contrato_adesao_plano cp set cp.dt_ini_vigencia = to_date(''01/04/2023'', ''dd/mm/yyyy''), ' ||
+			 'cp.dt_ini_validade = to_date(''01/04/2023'', ''dd/mm/yyyy'')where cp.cod_ts_contrato = ' || ce.cod_ts_contrato || ';',
+			 
+			 'update ts.contrato_plano cp set cp.dt_ini_vigencia = to_date(''01/04/2023'', ''dd/mm/yyyy'') where cp.cod_ts_contrato = ' || ce.cod_ts_contrato || ';',
+			 
+			 'update ts.VALOR_FE_CONTRATO cp set cp.dt_ini_vigencia = to_date(''01/04/2023'', ''dd/mm/yyyy'') where cp.cod_ts_contrato = ' || ce.cod_ts_contrato || ';',
+			 
+			 'update ts.contrato_plano_dependencia cp set cp.dt_ini_vigencia = to_date(''01/04/2023'', ''dd/mm/yyyy''), ' ||
+			 'cp.dt_ini_validade = to_date(''01/04/2023'', ''dd/mm/yyyy'') where cp.cod_ts_contrato = ' || ce.cod_ts_contrato || ';'*/
+			  
+			 'update ts.beneficiario b set b.data_inclusao = to_date(''' || ce.data_inicio_vigencia || 
+			 ''', ''dd/mm/yyyy'') where b.cod_ts = ' || b.cod_ts || ';'
+from ts.contrato_empresa ce
+		 join ts.beneficiario b on b.cod_ts_contrato = ce.cod_ts_contrato
+where 1 = 1
+       /*and exists (select 1
+              from ts.contrato_cobranca cc
+							where cc.cod_ts_contrato = ce.cod_ts_contrato
+							      and cc.dt_ini_cobranca >= to_date('01/03/2023', 'dd/mm/yyyy'))*/
+      and ce.num_contrato IN ('47065',
+'47519',
+'47428',
+'47529',
+'47509',
+'47396',
+'46459',
+'46447',
+'47548',
+'47524',
+'47544',
+'47512',
+'47400',
+'46479',
+'47422',
+'47516',
+'47517',
+'47419',
+'47527',
+'47618',
+'47557',
+'46913',
+'47539',
+'46788',
+'47547',
+'46799',
+'47549',
+'47021',
+'47592',
+'47403',
+'47390',
+'47384',
+'46915',
+'47424',
+'47402',
+'47421',
+'47420',
+'47389',
+'47064',
+'47392',
+'47394',
+'47707',
+'47374',
+'47388',
+'47442',
+'47443',
+'47444',
+'47445',
+'47032',
+'47063',
+'47391',
+'46853',
+'47543',
+'47609')
+order by 1

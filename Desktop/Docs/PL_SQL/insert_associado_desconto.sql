@@ -1,0 +1,98 @@
+insert into ts.associado_desconto(cod_ts,
+                                  dt_ini_vigencia,
+                                  dt_fim_vigencia,
+                                  cod_tipo_desconto,
+                                  pct_desconto,
+                                  cod_usuario_inc,
+                                  dt_registro_inc,
+                                  cod_usuario_fim,
+                                  dt_registro_fim,
+                                  txt_observacao,
+                                  cod_usuario_atu,
+                                  dt_atu)
+select distinct b.cod_ts,
+                to_date('01/11/2022', 'dd/mm/yyyy'),
+                last_day('01/04/2023'),
+                --last_day('01/04/2021'),
+                2, --Tipo de Desconto: 'UNIMED RN'
+                /*
+                case pm.ind_participacao 
+                  when 'S'
+                  then 30
+                    else 0 
+                end,
+                */
+                10,
+                'ACFARANIO',
+                SYSDATE,
+                'ACFARANIO',
+                SYSDATE,
+                'Desconto Comercial 10% 6x',
+                'ACFARANIO',
+                SYSDATE
+from ts.beneficiario b
+     --join ts.ppf_proposta p on p.num_seq_proposta_ts = b.num_seq_proposta_ts
+     join ts.plano_medico pm on pm.cod_plano = b.cod_plano
+where not exists (select 1
+                  from ts.associado_desconto ad2
+                  where ad2.cod_ts = b.cod_ts
+                        and ad2.dt_ini_vigencia = to_date('01/11/2022', 'dd/mm/yyyy'))
+and b.num_associado in (142238899,
+142238902,
+142256587,
+142254932,
+142254940,
+142254959,
+142241687,
+142244007,
+142244015,
+142254673,
+142238490,
+142225002,
+142235792,
+142243191,
+142241237,
+142241245,
+142255203,
+142240346,
+142257885,
+142236861,
+142238708,
+142244317,
+142239003,
+142241709,
+142242985,
+142242730,
+142244023,
+142244031,
+142256200,
+142256544,
+142256552,
+142256560,
+142212334,
+142237213,
+142240737,
+142239011,
+142215627,
+142215635,
+142244198,
+142242110,
+142240745,
+142240753,
+142230952,
+142256714,
+142246522,
+142244260,
+142256501,
+142226726,
+142229822,
+142250074,
+142241520,
+142241539,
+142238961,
+142239534,
+142239542,
+142236357,
+142236365,
+142236373)
+--and p.num_proposta_adesao in ()      

@@ -1,0 +1,34 @@
+select  'update ts.corretor_venda s set s.id_cad_alt = ' || co.id_cad || ', s.dth_update_allsys = sysdate, s.dth_update_alltech = sysdate where s.cod_corretor_ts = ' || s.cod_corretor_ts || ';'
+from ts.corretor_venda s
+     join alt_cad_mig2@Prod_Alltech co on replace(co.id_cad_mig, 'CORR|', '') = to_char(s.cod_corretor_ts)
+where s.id_cad_alt is null
+
+
+-------------------------------------------
+
+select 'update ts.contrato_empresa ce set ce.id_cont = ' || co.id_cont || ', ce.dth_update_allsys = sysdate, ce.dth_update_alltech = sysdate where ce.cod_ts_contrato = ' || ce.cod_ts_contrato || ';'
+from ts.contrato_empresa ce
+     join alt_cont2@Prod_Alltech co on replace(co.cod_cont_mig, 'CONT|', '') = to_char(ce.cod_ts_contrato)
+where ce.id_cont is null
+
+-----------------------------
+
+select 'update beneficiario_entidade be set be.id_cad_alt = ' || mig.id_cad || ', be.dth_update_allsys = sysdate, be.dth_update_alltech = sysdate where be.cod_entidade_ts = ' || be.cod_entidade_ts || ';'
+from ts.beneficiario_entidade be
+     join alt_cad_mig2@Prod_Alltech mig on replace(mig.id_cad_mig, 'BEN|', '') = to_char(be.cod_entidade_ts)
+where be.id_cad_alt is null
+      and exists (select 1
+                  from ts.beneficiario b
+                  where b.cod_entidade_ts = be.cod_entidade_ts
+                        --and b.data_exclusao is null)
+                        and b.data_exclusao between to_date('01/06/2015', 'dd/mm/yyyy') and last_day('01/12/2022'))
+
+
+
+---------------------------------------------------------------
+
+select 'update ts.beneficiario be set be.id_cad_alt = ' || cad.id_cad || ' where be.cod_entidade_ts = ' || be.cod_entidade_ts || ';'
+from alt_cad_mig2@prod_alltech cad
+     join ts.beneficiario_entidade be on be.cod_entidade_ts = cad.pk_mig
+where be.id_cad_alt is null
+      and cad.tab_mig = 'BENEFICIARIO_ENTIDADE'

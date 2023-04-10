@@ -1,0 +1,10 @@
+delete ts.associado_esp_hist where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.beneficiario_contrato where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.beneficiario_empresa where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.beneficiario_movimento where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.mc_associado_web where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.ocorrencia_associado where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.associado_sib where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.beneficiario_contato where cod_entidade_ts in (select cod_entidade_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.FAT_EMISSAO_CANCELADA where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);
+delete ts.beneficiario where cod_ts in (select cod_ts from ts.beneficiario where cod_ts_tit = 1486642);

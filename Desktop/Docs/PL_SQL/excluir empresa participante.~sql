@@ -1,0 +1,11 @@
+select  distinct
+       'delete ts.empresa_contrato where cod_ts_contrato = ' || ec.cod_ts_contrato || ' and cod_entidade_ts = ' || ec.cod_entidade_ts || ';'  
+from ts.entidade_sistema es
+     join ts.contrato_empresa ce on ce.cod_titular_contrato = es.cod_entidade_ts
+		 join pm_contrato c on c.cnpj_cpf_subcontrato = es.num_cgc
+		 join ts.empresa_contrato ec on ec.cod_ts_contrato = ce.cod_ts_contrato 
+		                             and ec.cod_entidade_ts <> ce.cod_titular_contrato 
+																 and upper(ec.nom_empresa_cartao) like '%MODELO%'
+																 and ec.ind_tipo_participante = 'P'
+
+where  ce.data_inicio_vigencia >= to_date('01/03/2023', 'dd/mm/yyyy')

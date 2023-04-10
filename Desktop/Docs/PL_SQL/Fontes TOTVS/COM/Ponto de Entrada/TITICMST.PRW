@@ -1,0 +1,5 @@
+#INCLUDE "TOTVS.CH"
+
+User Function TITICMST
+    SE2->E2_DATALIB := dDatabase
+Return {SE2->E2_NUM,SE2->E2_VENCTO}
