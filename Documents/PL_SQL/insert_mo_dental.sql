@@ -1,0 +1,2 @@
+update ts.contrato_empresa ce set ce.cod_administradora_ope = '', ce.num_contrato_operadora = '' where ce.num_contrato = ''
+update ts.associado_aditivo aa set aa.num_associado_operadora = '08650003606001000' where aa.dt_fim_vigencia is null and aa.cod_ts = (select b.cod_ts from ts.beneficiario b where b.num_associado = '141497980') and aa.cod_aditivo = (select a.cod_aditivo from ts.aditivo a where a.cod_tipo_rubrica = 50 and a.cod_aditivo = aa.cod_aditivo); 
